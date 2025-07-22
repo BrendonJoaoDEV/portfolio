@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="https://www.google.com/recaptcha/api.js?render=6LfqBYsrAAAAAJwy5XgV2Kw2L3zdpdBrI02Vwx8D"></script>
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js" defer></script>
+    <title>Entre em contato</title>
+</head>
+<body>
+    <header id="heade-placeholder">
+        <!-- Header carregado dinamicamente -->
+    </header>
+
+    <main>
+        <h2>Entre em contato</h2>
+
+        <section id="container-formulario">
+            <form>
+                <label for="entrada-nome">Nome:</label>
+                <input type="text" id="entrada-nome" placeholder="Digite seu nome" required>
+
+                <label for="entrada-email">Email:</label>
+                <input type="email" id="entrada-email" placeholder="Digite seu email" required>
+
+                <label for="entrada-motivo">Motivo do contato:</label>
+                <select id="entrada-motivo" required>
+                    <option value="contratar">Contratar um serviço</option>
+                    <option value="parceria">Fazer uma parceria</option>
+                    <option value="outro">Outro motivo</option>
+                </select>
+
+                <label for="entrada-mensagem">Mensagem:</label>
+                <input type="text" id="entrada-mensagem" placeholder="Digite uma mensagem" required>
+            </form>
+
+            <button type="button" id="enviar-formulario" aria-label="Enviar os dados do formulário">Enviar</button>
+        </section>
+    </main>
+
+    <footer id="footer-placeholder">
+        <!-- Footer carregado dinamicamente -->
+    </footer>
+
+    <script type="module" src="/src/pages/contato.js"></script>
+</body>
+</html>
