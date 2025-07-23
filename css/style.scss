@@ -1,0 +1,116 @@
+// CSS compilado com o pré-processador sass
+// Para inatalar o sass, rode no terminal: npm install -g sass
+// Para compilação automática, rode no terminal: sass --watch style.scss:style.css
+// Para compilação manual, rode no terminal: sass style.scss style.css
+// Para compilação minimizada, rode no terminal: sass style.scss style.css --style compressed
+
+:root {
+    --fonte-texto: ;
+    --fonte-titulo: ;
+    --tamanho-fontes: ;
+    --tamanho-imagem-width: ;
+    --tamanho-imagem-height: ;
+    --tamanho-icone: 30px;
+    --direcao-flex: row;
+    --direcao-pagina: column;
+    --cor-primaria: #F5F5DC;
+    --cor-secundaria: #3A2D1A;
+}
+
+[data-theme="dark"] {
+    --cor-primaria: #3A2D1A;
+    --cor-secundaria: #F5F5DC;
+}
+
+@mixin flex ($direcao) {
+    display: flex;
+    flex-direction: $direcao;
+}
+
+@mixin flex-centralizado-x ($direcao) {
+    display: flex;
+    flex-direction: $direcao;
+    justify-content: center;
+}
+
+@mixin flex-centralizado-y ($direcao) {
+    display: flex;
+    flex-direction: $direcao;
+    align-items: center;
+}
+
+@mixin flex-centralizado-xy ($direcao) {
+    display: flex;
+    flex-direction: $direcao;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin imagem-redonda {
+    border-radius: 50%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--cor-primaria);
+}
+
+header {
+    @include flex-centralizado-xy(column);
+    width: 100%;
+}
+
+header nav {
+    @include flex-centralizado-x(column);
+    width: 100%;
+    gap: 0.5rem;
+}
+
+nav > a {
+    width: 100%;
+    text-align: center;
+    padding: 0.5rem;
+}
+
+a {
+    font-family: var(--fonte-texto);
+    text-decoration: none;
+    color: var(--cor-secundaria);
+}
+
+p {
+    font-family: var(--fonte-texto);
+    color: var(--cor-secundaria)
+}
+
+footer {
+    @include flex-centralizado-xy(column);
+    width: 100%;
+}
+
+footer p {
+    margin: 0.25rem;
+}
+
+.icon {
+    width: var(--tamanho-icone);
+}
+
+#redes-sociais {
+    @include flex-centralizado-x(row);
+    list-style: none;
+    gap: 1rem;
+}
+
+#redes-sociais li {
+    margin: 0.75rem 0rem;
+}
+
+#redes-sociais li a {
+    @include flex-centralizado-y(row);
+}
