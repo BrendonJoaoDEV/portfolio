@@ -27,6 +27,7 @@
 
 body {
   background-color: var(--cor-primaria);
+  border: 0.4rem dashed var(--cor-secundaria);
 }
 
 header {
