@@ -11,11 +11,7 @@
     --tamanho-titulo: 1.6rem;
     --tamanho-texto: 1.1rem;
     --tamanho-destaque: 1.3rem;
-    --tamanho-imagem-width: ;
-    --tamanho-imagem-height: ;
     --tamanho-icone: 30px;
-    --direcao-flex: row;
-    --direcao-pagina: column;
     --cor-primaria: #F5F5DC;
     --cor-secundaria: #3A2D1A;
 }
@@ -207,4 +203,23 @@ footer p {
 
 #redes-sociais li a {
     @include flex-centralizado-y(row);
+}
+
+/* Tablets grandes/notebooks (768px+) */
+@media (min-width: 768px) {
+    #container-projetos {
+        @include flex-centralizado-y(row);
+        flex-wrap: wrap;
+    }
+
+    #container-projetos > article {
+        width: 45%;
+    }
+}
+
+/* Laptops/Desktops (1024px+) */
+@media (min-width: 1024px) {
+    #container-projetos > article {
+        width: 30%;
+    }
 }
