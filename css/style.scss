@@ -5,9 +5,12 @@
 // Para compilação minimizada, rode no terminal: sass style.scss style.css --style compressed
 
 :root {
-    --fonte-texto: ;
-    --fonte-titulo: ;
-    --tamanho-fontes: ;
+    --fonte-titulo: 'Playwrite BR';
+    --fonte-texto: 'Nunito';
+    --fonte-link: 'Roboto Mono';
+    --tamanho-titulo: 1.6rem;
+    --tamanho-texto: 1.1rem;
+    --tamanho-link: 1.3rem;
     --tamanho-imagem-width: ;
     --tamanho-imagem-height: ;
     --tamanho-icone: 30px;
@@ -78,14 +81,23 @@ nav > a {
 }
 
 a {
-    font-family: var(--fonte-texto);
+    font-family: var(--fonte-link);
+    font-size: var(--tamanho-link);
     text-decoration: none;
     color: var(--cor-secundaria);
 }
 
 p {
     font-family: var(--fonte-texto);
+    font-size: var(--tamanho-texto);
     color: var(--cor-secundaria)
+}
+
+h2, h3 {
+    font-family: var(--fonte-titulo);
+    font-size: var(--tamanho-titulo);
+    color: var(--cor-secundaria);
+    text-align: center;
 }
 
 footer {
