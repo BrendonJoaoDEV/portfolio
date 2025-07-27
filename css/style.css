@@ -1,10 +1,10 @@
 :root {
   --fonte-titulo: "Playwrite BR";
   --fonte-texto: "Nunito";
-  --fonte-link: "Roboto Mono";
+  --fonte-destaque: "Roboto Mono";
   --tamanho-titulo: 1.6rem;
   --tamanho-texto: 1.1rem;
-  --tamanho-link: 1.3rem;
+  --tamanho-destaque: 1.3rem;
   --tamanho-imagem-width: ;
   --tamanho-imagem-height: ;
   --tamanho-icone: 30px;
@@ -51,6 +51,38 @@ nav > a {
   padding: 0.5rem;
 }
 
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: var(--cor-secundaria);
+  margin: 1rem;
+  border-radius: 5px;
+}
+
+label {
+  font-family: var(--fonte-destaque);
+  font-size: var(--tamanho-destaque);
+  color: var(--cor-primaria);
+  margin: 0rem 0.25rem;
+}
+
+input, select, option {
+  font-family: var(--fonte-texto);
+  font-size: var(--fonte-texto);
+  color: var(--cor-secundaria);
+  margin: 0.5rem 0.25rem;
+  border-radius: 4px;
+  background-color: var(--cor-primaria);
+}
+
+form button {
+  background-color: var(--cor-primaria);
+  font-family: var(--fonte-destaque);
+  color: var(--cor-secundaria);
+  width: 35%;
+}
+
 h2, h3 {
   font-family: var(--fonte-titulo);
   font-size: var(--tamanho-titulo);
@@ -59,8 +91,8 @@ h2, h3 {
 }
 
 a {
-  font-family: var(--fonte-link);
-  font-size: var(--tamanho-link);
+  font-family: var(--fonte-destaque);
+  font-size: var(--tamanho-destaque);
   text-decoration: none;
   color: var(--cor-secundaria);
 }
