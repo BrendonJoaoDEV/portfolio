@@ -87,9 +87,16 @@ form button {
   margin: 0.5rem;
 }
 
-h2, h3 {
+h2 {
   font-family: var(--fonte-titulo);
   font-size: var(--tamanho-titulo);
+  color: var(--cor-secundaria);
+  text-align: center;
+}
+
+h3 {
+  font-family: var(--fonte-titulo);
+  font-size: calc(var(--tamanho-titulo) - 15%);
   color: var(--cor-secundaria);
   text-align: center;
 }
