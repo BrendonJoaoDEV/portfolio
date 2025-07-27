@@ -80,6 +80,13 @@ nav > a {
     padding: 0.5rem;
 }
 
+h2, h3 {
+    font-family: var(--fonte-titulo);
+    font-size: var(--tamanho-titulo);
+    color: var(--cor-secundaria);
+    text-align: center;
+}
+
 a {
     font-family: var(--fonte-link);
     font-size: var(--tamanho-link);
@@ -91,13 +98,6 @@ p {
     font-family: var(--fonte-texto);
     font-size: var(--tamanho-texto);
     color: var(--cor-secundaria)
-}
-
-h2, h3 {
-    font-family: var(--fonte-titulo);
-    font-size: var(--tamanho-titulo);
-    color: var(--cor-secundaria);
-    text-align: center;
 }
 
 footer {
