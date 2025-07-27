@@ -33,13 +33,13 @@
 @mixin flex-centralizado-x ($direcao) {
     display: flex;
     flex-direction: $direcao;
-    justify-content: center;
+    align-items: center;
 }
 
 @mixin flex-centralizado-y ($direcao) {
     display: flex;
     flex-direction: $direcao;
-    align-items: center;
+    justify-content: center;
 }
 
 @mixin flex-centralizado-xy ($direcao) {

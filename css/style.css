@@ -40,7 +40,7 @@ header {
 header nav {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  align-items: center;
   width: 100%;
   gap: 0.5rem;
 }
@@ -54,7 +54,7 @@ nav > a {
 form {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  align-items: center;
   background-color: var(--cor-secundaria);
   margin: 1rem;
   border-radius: 5px;
@@ -122,7 +122,7 @@ footer p {
 #redes-sociais {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  align-items: center;
   list-style: none;
   gap: 1rem;
 }
@@ -134,7 +134,7 @@ footer p {
 #redes-sociais li a {
   display: flex;
   flex-direction: row;
-  align-items: center;
+  justify-content: center;
 }
 
 /*# sourceMappingURL=style.css.map */
