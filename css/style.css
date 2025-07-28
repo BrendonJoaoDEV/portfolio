@@ -6,6 +6,9 @@
   --tamanho-texto: 1.1rem;
   --tamanho-destaque: 1.3rem;
   --tamanho-icone: 30px;
+}
+
+[data-theme=light] {
   --cor-primaria: #F5F5DC;
   --cor-secundaria: #3A2D1A;
 }
