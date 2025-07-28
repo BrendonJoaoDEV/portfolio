@@ -201,6 +201,16 @@ footer p {
   #container-projetos > article {
     width: 45%;
   }
+  header {
+    flex-direction: column-reverse;
+  }
+  header nav {
+    flex-direction: row;
+    justify-content: end;
+  }
+  nav > a {
+    width: fit-content;
+  }
 }
 /* Laptops/Desktops (1024px+) */
 @media (min-width: 1024px) {
