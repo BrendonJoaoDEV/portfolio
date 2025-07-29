@@ -8,4 +8,12 @@ export function definirTema (elementoPrincipal) {
     }
 }
 
-function mudarTema () {}
+export function mudarTema (elementoPrincipal) {
+    const temaAtual = elementoPrincipal.getAttribute('data-theme');
+
+    if (temaAtual === 'light') {
+        elementoPrincipal.setAttribute('data-theme', 'dark');
+    } else {
+        elementoPrincipal.setAttribute('data-theme', 'light');
+    }
+}
