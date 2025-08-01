@@ -15,3 +15,20 @@ export function converterStringEmElemento(stringHTML) {
     elemento = elemento.body.firstElementChild;
     return elemento;
 }
+
+export function validarNome(nome) {
+    if (!nome || nome.trim() === '') {
+        return {valido: false, erro: 'Preencha o campo "Nome"'};
+    }
+
+    if (nome.trim().split(/\s+/).length < 2) {
+        return {valido: false, erro: 'Prencha o campo "Nome" com nome e sobrenome'};
+    }
+
+    const regex = /^[a-zA-ZÀ-ÿ\s]+$/;
+    if (regex.test(nome)) {
+        return {valido: true, erro: 'Tudo certo!'}
+    } else {
+        return {valido: false, erro: 'O campo "Nome" não pode conter caracteres especiais'}
+    }
+}
