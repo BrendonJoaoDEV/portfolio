@@ -87,6 +87,11 @@ form button {
   margin: 0.5rem;
 }
 
+.erro {
+  display: none;
+  color: red;
+}
+
 h2 {
   font-family: var(--fonte-titulo);
   font-size: var(--tamanho-titulo);
