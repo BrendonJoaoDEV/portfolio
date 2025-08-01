@@ -92,6 +92,10 @@ form button {
   color: red;
 }
 
+#honeypot {
+  display: none;
+}
+
 h2 {
   font-family: var(--fonte-titulo);
   font-size: var(--tamanho-titulo);
