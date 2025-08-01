@@ -27,8 +27,21 @@ export function validarNome(nome) {
 
     const regex = /^[a-zA-ZÀ-ÿ\s]+$/;
     if (regex.test(nome)) {
-        return {valido: true, erro: 'Tudo certo!'}
+        return {valido: true, erro: 'Tudo certo!'};
     } else {
-        return {valido: false, erro: 'O campo "Nome" não pode conter caracteres especiais'}
+        return {valido: false, erro: 'O campo "Nome" não pode conter caracteres especiais'};
+    }
+}
+
+export function validarEmail(email) {
+    if (!email || email.trim() === '') {
+        return {valido: false, erro: 'Prencha o campo "Email"'};
+    }
+
+    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+    if (regex.test(email)) {
+        return {valido: true, erro: 'Tudo certo!'};
+    } else {
+        return {valido: false, erro: 'O campo "email" deve conter um email válido'};
     }
 }
