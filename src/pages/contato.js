@@ -1,5 +1,6 @@
 import { carregarElementoEstatico, validarNome, validarEmail, validarVazio} from '../utils/utils.js';
 import { definirTema, mudarTema } from '../modules/mudanca_tema.js';
+import { verificarHoneypot } from '../modules/validacao_bots.js';
 
 document.addEventListener('DOMContentLoaded', () => {
     const body = document.querySelector('body');
@@ -11,9 +12,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const entradaEmail = document.getElementById('entrada-email');
     const entradaMotivo = document.getElementById('entrada-motivo');
     const entradaMensagem = document.getElementById('entrada-mensagem');
+    const entradaHoneypot = document.getElementById('honeypot');
     const erroNome = document.getElementById('erro-nome');
     const erroEmail = document.getElementById('erro-email');
     const erroMensagem = document.getElementById('erro-mensagem');
+    const erroGeral = document.getElementById('erro-geral');
 
     definirTema(body);
 
@@ -53,7 +56,17 @@ document.addEventListener('DOMContentLoaded', () => {
         } else {
             erroMensagem.style.display = 'none';
         }
+
         // Validar se o usuário parece humano suficiente
+        validacao = verificarHoneypot(entradaHoneypot);
+        if (!validacao.valido) {
+            erroGeral.style.display = 'block';
+            erroGeral.textContent = validacao.erro;
+        } else {
+            erroGeral.style.display = 'none';
+            console.log(validacao.erro);
+        }
+
             // Se todos forem válidos e usuário humano: enviar dados estruturados a função de envio
             // Se não, pedir para o usuário reinserir o dado invalido
     });
