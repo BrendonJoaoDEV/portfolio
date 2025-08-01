@@ -45,3 +45,11 @@ export function validarEmail(email) {
         return {valido: false, erro: 'O campo "email" deve conter um email válido'};
     }
 }
+
+export function validarVazio(nomeCampo, valor) {
+    if (!valor || valor.trim() === '') {
+        return {valido: false, erro: `Prencha o campo "${nomeCampo}"`};
+    } else {
+        return {valido: true, erro: 'Tudo certo!'};
+    }
+}
