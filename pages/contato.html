@@ -24,9 +24,11 @@
             <form>
                 <label for="entrada-nome">Nome:</label>
                 <input type="text" id="entrada-nome" placeholder="Digite seu nome" required>
+                <p id="erro-nome" class="erro"></p>
 
                 <label for="entrada-email">Email:</label>
                 <input type="email" id="entrada-email" placeholder="Digite seu email" required>
+                <p id="erro-email" class="erro"></p>
 
                 <label for="entrada-motivo">Motivo do contato:</label>
                 <select id="entrada-motivo" required>
@@ -37,6 +39,7 @@
 
                 <label for="entrada-mensagem">Mensagem:</label>
                 <textarea id="entrada-mensagem" rows="3"></textarea>
+                <p id="erro-mensagem" class="erro"></p>
                 
                 <button type="button" id="enviar-formulario" aria-label="Enviar os dados do formulário">Enviar</button>
             </form>
