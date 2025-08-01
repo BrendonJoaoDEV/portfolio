@@ -17,8 +17,9 @@ export function converterStringEmElemento(stringHTML) {
 }
 
 export function validarNome(nome) {
-    if (!nome || nome.trim() === '') {
-        return {valido: false, erro: 'Preencha o campo "Nome"'};
+    let validacao = validarVazio('Nome', nome);
+    if(!validacao.valido) {
+        return validacao;
     }
 
     if (nome.trim().split(/\s+/).length < 2) {
@@ -34,8 +35,9 @@ export function validarNome(nome) {
 }
 
 export function validarEmail(email) {
-    if (!email || email.trim() === '') {
-        return {valido: false, erro: 'Prencha o campo "Email"'};
+    let validacao = validarVazio('Email', email);
+    if(!validacao.valido) {
+        return validacao;
     }
 
     const regex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
