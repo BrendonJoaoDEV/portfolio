@@ -8,8 +8,9 @@
     <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js" defer></script>
     <title>Entre em contato</title>
 </head>
-<body>
-    <header id="heade-placeholder">
+  
+<body data-theme="dark">
+    <header id="header-placeholder">
         <!-- Header carregado dinamicamente -->
         <p>o elemento header está sendo carregado</p>
     </header>
@@ -17,7 +18,7 @@
     <main>
         <h2>Entre em contato</h2>
 
-        <section id="container-formulario">
+        <section>
             <form>
                 <label for="entrada-nome">Nome:</label>
                 <input type="text" id="entrada-nome" placeholder="Digite seu nome" required>
@@ -33,10 +34,10 @@
                 </select>
 
                 <label for="entrada-mensagem">Mensagem:</label>
-                <input type="text" id="entrada-mensagem" placeholder="Digite uma mensagem" required>
+                <textarea id="entrada-mensagem" rows="3"></textarea>
+                
+                <button type="button" id="enviar-formulario" aria-label="Enviar os dados do formulário">Enviar</button>
             </form>
-
-            <button type="button" id="enviar-formulario" aria-label="Enviar os dados do formulário">Enviar</button>
         </section>
     </main>
 
