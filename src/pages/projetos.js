@@ -9,8 +9,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     definirTema(body);
 
-    carregarElementoEstatico('../partials/header.html', header);
-    carregarElementoEstatico('../partials/footer.html', footer);
+    carregarElementoEstatico('/portfolio/partials/header.html', header);
+    carregarElementoEstatico('/portfolio/partials/footer.html', footer);
     
     btnTema.addEventListener('click', () => {mudarTema(body)});
 });
